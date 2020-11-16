@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
   <meta charset="UTF-8">
-  <title>New York Times Search</title>
+  <title>Weather App</title>
   <!-- Bootstrap CSS CDN  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
   <!-- Font Awesome CSS Icons (For cool glyphicons) -->
@@ -15,7 +15,7 @@
 
   <div class="container-fluid">
 
-    <div class="jumbotron" style="background-color: #363636 ; color: #fff;">
+    <div class="jumbotron" style="background-color: #2a2a44 ; color: #fff;">
       <h1 class="text-center">
         <strong>Weather Application</strong>
       </h1>
@@ -25,28 +25,28 @@
       <div class="col-3">
         <h3>Search a city:</h3>
         <form class="form-inline active-pink-4">
-          <input class="form-control form-control-lg mr-3 w-75" type="text" placeholder="City Name" aria-label="Search">
-          <i class="fa fa-search" aria-hidden="true"></i>
+          <input id="searchCity" class="form-control form-control-lg mr-3 w-75" type="text" placeholder="City Name" aria-label="Search">
+          <button id="runSearch" class="btn btn-lg"><i class="fa fa-search" aria-hidden="true"></i></button>
         </form>
 
         <br>
 
         <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action active">Cras justo odio</a>
-          <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-          <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-          <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+          <a href="#" class="list-group-item list-group-item-action active">City</a>
+          <a href="#" class="list-group-item list-group-item-action">City</a>
+          <a href="#" class="list-group-item list-group-item-action">City</a>
+          <a href="#" class="list-group-item list-group-item-action">City</a>
         </div>
       </div>
 
       <div class="col-8">
         <div class="card p-4" style="height: 100%;">
-          <h2>City (current date) (weather type icon)</h2>
+          <h2 id="mainCity"></h2>
           <br>
-          <p>Temp: 80.5 F</p>
-          <p>Humidity: 20%</p>
-          <p>Wind Speed: 10 MPH</p>
-          <p>UV Index: 6.53</p>
+          <p id="mainTemp"></p>
+          <p id="mainHumidity"></p>
+          <p id="mainWind"></p>
+          <p id="mainUV"></p>
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="card bg-primary text-white p-2" style="width: 10rem;">
+        <div class="card bg-primary text-white p-2 mt-1 mb-1" style="width: 10rem;">
           <h4>date</h4>
           <p>icon</p>
           <p>Temp: 80 F</p>
@@ -67,7 +67,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="card bg-primary text-white p-2" style="width: 10rem;">
+        <div class="card bg-primary text-white p-2 mt-1 mb-1" style="width: 10rem;">
           <h4>date</h4>
           <p>icon</p>
           <p>Temp: 80 F</p>
@@ -75,7 +75,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="card bg-primary text-white p-2" style="width: 10rem;">
+        <div class="card bg-primary text-white p-2 mt-1 mb-1" style="width: 10rem;">
           <h4>date</h4>
           <p>icon</p>
           <p>Temp: 80 F</p>
@@ -83,7 +83,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="card bg-primary text-white p-2" style="width: 10rem;">
+        <div class="card bg-primary text-white p-2 mt-1 mb-1" style="width: 10rem;">
           <h4>date</h4>
           <p>icon</p>
           <p>Temp: 80 F</p>
@@ -91,7 +91,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="card bg-primary text-white p-2" style="width: 10rem;">
+        <div class="card bg-primary text-white p-2 mt-1 mb-1" style="width: 10rem;">
           <h4>date</h4>
           <p>icon</p>
           <p>Temp: 80 F</p>
