@@ -3,7 +3,7 @@ function buildQueryURL() {
 
   const city = $("#searchCity").val().trim();
 
-  const queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4535e384f0a4ea4ebc02ddb6fb1569c5`;
+  const queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4535e384f0a4ea4ebc02ddb6fb1569c5&units=imperial`;
  
   console.log("---------------\nURL: " + queryURL + "\n---------------");
 
