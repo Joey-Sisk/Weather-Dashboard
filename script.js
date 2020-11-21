@@ -10,7 +10,7 @@ let cityBtn;
 
 function updatePage() { // load data to page and fill API's
 
-  const queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${$("#searchCity").val().trim()}&appid=4535e384f0a4ea4ebc02ddb6fb1569c5&units=imperial`;
+  const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${$("#searchCity").val().trim()}&appid=4535e384f0a4ea4ebc02ddb6fb1569c5&units=imperial`;
 
   console.log("---------------\nBasic URL: " + queryURL + "\n---------------");
 
@@ -31,7 +31,7 @@ function updatePage() { // load data to page and fill API's
 
     // UV API
 
-    const UVQueryURL = `http://api.openweathermap.org/data/2.5/uvi?lat=${weatherData.coord.lat}&lon=${weatherData.coord.lon}&appid=4535e384f0a4ea4ebc02ddb6fb1569c5`;
+    const UVQueryURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${weatherData.coord.lat}&lon=${weatherData.coord.lon}&appid=4535e384f0a4ea4ebc02ddb6fb1569c5`;
 
     console.log("---------------\nUV URL: " + UVQueryURL + "\n---------------");
 
@@ -47,7 +47,7 @@ function updatePage() { // load data to page and fill API's
 
   // forcast API
 
-  const forcastQueryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${$("#searchCity").val().trim()}&appid=4535e384f0a4ea4ebc02ddb6fb1569c5&units=imperial`;
+  const forcastQueryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${$("#searchCity").val().trim()}&appid=4535e384f0a4ea4ebc02ddb6fb1569c5&units=imperial`;
 
   console.log("---------------\nForcast UV URL: " + forcastQueryURL + "\n---------------");
 
