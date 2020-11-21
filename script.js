@@ -1,8 +1,8 @@
 
 let savedCities = { // fill out the city buttons.
-  city0: "",
-  city1: "",
-  city2: "",
+  city0: "Portland",
+  city1: "Dallas",
+  city2: "San Antonio",
   city3: ""
 };
 
@@ -41,6 +41,12 @@ function updatePage() { // load data to page and fill API's
     }).then(function (UVWeatherData) {
 
       $("#mainUV").text("UV Index: " + UVWeatherData.value);
+
+      if (UVWeatherData.value > 4) {
+        $("#mainUV").attr("class", "text-danger");
+      } else {
+        $("#mainUV").attr("class", "text-success");
+      }
 
     });
   });
@@ -99,6 +105,8 @@ function checkStorage() { // load previously saved cities
     savedCities = previously;
   } else {
     localStorage.setItem("cities", JSON.stringify(savedCities));
+    $("#searchCity").val("Austin");
+    updatePage();
   }
 }
 
